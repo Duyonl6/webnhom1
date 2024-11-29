@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Cá Nhân IG Giả Lập</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Nunito:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/user/css/profile.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/home/html/index.html">Trang chủ</a></li>
+                <li><a href="/home/html/search.html">Tìm kiếm</a></li>
+                <li><a href="/user/html/edit.html">Thông tin cá nhân</a></li>
+            </ul>
+        </nav>
+        <div class="back-to-home">
+            <a href="/home/html/index.html" class="home-button">
+                <i class="fa fa-home"></i> Màn hình chính
+            </a>
+        </div>
+    </header>
+    <section class="profile">
+        <div class="profile-header">
+            <img src="avatar.jpg" alt="Avatar" class="avatar">
+            <h1>Người Dùng</h1>
+            <p>@username</p>
+            <div class="profile-stats">
+                <span><strong>100</strong> Bài đăng</span>
+                <span><strong>500</strong> Người theo dõi</span>
+                <span><strong>300</strong> Đang theo dõi</span>
+            </div>
+        </div>
+    </section>
+    <section class="new-post">
+        <h2>Đăng bài mới</h2>
+        <input type="file" id="postImage" accept="image/*">
+        <textarea id="postCaption" placeholder="Viết mô tả bài đăng..."></textarea>
+        <button id="postButton">Đăng bài</button>
+    </section>
+<section class="feed">
+    <h2>Bài đăng mới nhất</h2>
+    <div class="feed-item">
+        <div class="post-header">
+            <img src="avatar.jpg" alt="User Avatar" class="avatar">
+            <div class="post-info">
+                <p class="username">Người Dùng</p>
+                <p class="timestamp">2 giờ trước</p>
+            </div>
+        </div>
+        
+        <img src="post1.jpg" alt="Post 1" class="post-image">
+
+        <div class="post-actions">
+            <button class="like-button">
+                <i class="fa fa-heart"></i>
+            </button>
+            <button class="comment-button">
+                <i class="fa fa-comment"></i>
+            </button>
+            <button class="share-button">
+                <i class="fa fa-share"></i>
+            </button>
+        </div>
+
+        <p class="post-caption">Đây là bài đăng đầu tiên của tôi! #mạngxãhội</p>
+    </div>
+    <div class="feed-item">
+        <div class="post-header">
+            <img src="avatar2.jpg" alt="User Avatar" class="avatar">
+            <div class="post-info">
+                <p class="username">Người Dùng 2</p>
+                <p class="timestamp">Hôm qua</p>
+            </div>
+        </div>
+        
+        <img src="post2.jpg" alt="Post 2" class="post-image">
+
+        <div class="post-actions">
+            <button class="like-button">
+                <i class="fa fa-heart"></i>
+            </button>
+            <button class="comment-button">
+                <i class="fa fa-comment"></i>
+            </button>
+            <button class="share-button">
+                <i class="fa fa-share"></i>
+            </button>
+        </div>
+
+        <p class="post-caption">Chuyến du lịch tuyệt vời! #du lịch</p>
+    </div>
+</section>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/admin/css/admin.css">
+</head>
+<body>
+    <div class="d-flex">
+        <nav class="bg-dark text-white sidebar flex-column p-3">
+            <h2 class="text-center">Admin Panel</h2>
+            <hr>
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a href="/admin/html/admin.html" class="nav-link text-white">
+                        <i class="fas fa-home me-2"></i> Dashboard
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/admin/html/user.html" class="nav-link text-white">
+                        <i class="fas fa-users me-2"></i> User
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/admin/html/adminsp.html" class="nav-link text-white">
+                        <i class="fas fa-box me-2"></i> Support Management
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/admin/html/anlytics.html" class="nav-link text-white">
+                        <i class="fas fa-chart-line me-2"></i> Anlytisc
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/admin/html/adminpay.html" class="nav-link text-white">
+                        <i class="fa-solid fa-money-bill-wave"></i> Pay
+                    </a>
+                </li>
+            </ul>
+            <hr>
+            <div class="text-center mt-auto">
+                <button class="btn btn-danger w-100">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                </button>
+            </div>
+        </nav>
+
+        <div class="flex-grow-1 p-4">
+            <header class="d-flex justify-content-between align-items-center mb-4">
+                <h1 class="h3">Dashboard</h1>
+                <div class="btn btn-outline-secondary">
+                    <i class="fas fa-user-circle"></i> Admin
+                </div>
+            </header>
+
+            <div class="row g-4 mb-4">
+                <div class="col-lg-3 col-sm-6">
+                    <div class="card text-white bg-primary shadow">
+                        <div class="card-body">
+                            <h5 class="card-title">Total Users</h5>
+                            <p class="card-text fs-2" id="total-users">2,340</p>
+                            <i class="fas fa-users card-icon"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="card text-white bg-success shadow">
+                        <div class="card-body">
+                            <h5 class="card-title">Active Users</h5>
+                            <p class="card-text fs-2" id="active-users">1,645</p>
+                            <i class="fas fa-user-check card-icon"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="card text-white bg-warning shadow">
+                        <div class="card-body">
+                            <h5 class="card-title">Total Revenue</h5>
+                            <p class="card-text fs-2" id="total-revenue">$45,680</p>
+                            <i class="fas fa-dollar-sign card-icon"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="card text-white bg-info shadow">
+                        <div class="card-body">
+                            <h5 class="card-title">Gender Ratio</h5>
+                            <p class="card-text fs-4" id="gender-ratio">Male: 60% | Female: 40%</p>
+                            <i class="fas fa-venus-mars card-icon"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+<section>
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2 class="h5">Admin List</h2>
+        <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addAdminModal">
+            <i class="fas fa-user-plus"></i> Add Admin
+        </button>
+    </div>
+    <div class="table-responsive">
+        <table class="table table-striped table-hover align-middle">
+            <thead class="table-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Role</th>
+                    <th>Status</th>
+                    <th>Permissions</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="admin-list">
+                <tr>
+                    <td>1</td>
+                    <td>Đức Minh</td>
+                    <td>ducminh9@gmail.com</td>
+                    <td>Super Admin</td>
+                    <td>Active</td>
+                    <td>Full Access</td>
+                    <td>
+                        <button class="btn btn-sm btn-primary">Edit</button>
+                        <button class="btn btn-sm btn-danger">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Đức Duy</td>
+                    <td>duyne09@gmail.com</td>
+                    <td>Admin</td>
+                    <td>Active</td>
+                    <td>Limited Access</td>
+                    <td>
+                        <button class="btn btn-sm btn-primary">Edit</button>
+                        <button class="btn btn-sm btn-danger">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<div class="modal fade" id="addAdminModal" tabindex="-1" aria-labelledby="addAdminModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addAdminModalLabel">Add Admin</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="add-admin-form">
+                    <div class="mb-3">
+                        <label for="admin-name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="admin-name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="admin-email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="admin-email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="admin-role" class="form-label">Role</label>
+                        <select class="form-select" id="admin-role">
+                            <option value="Super Admin">Super Admin</option>
+                            <option value="Admin">Admin</option>
+                            <option value="Moderator">Moderator</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary" id="save-admin">Add Admin</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    
+</body>
+</html>

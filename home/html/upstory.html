@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tải Tin Lên</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/home/css/upstory.css">
+</head>
+<body>
+
+<header>
+  <h1>Tải Tin Lên</h1>
+</header>
+
+<main>
+  <form id="uploadForm">
+    <div class="form-group">
+      <label for="caption">Chú thích</label>
+      <textarea id="caption" placeholder="Viết gì đó về tin này..." required></textarea>
+    </div>
+    <div class="form-group">
+      <label for="fileInput">Tải lên hình ảnh hoặc video</label>
+      <input type="file" id="fileInput" accept="image/*,video/*" class="file-input" onchange="previewFile()">
+      <button type="button" class="upload-btn" onclick="document.getElementById('fileInput').click()">Chọn File</button>
+    </div>
+
+    <div class="preview-container" id="previewContainer">
+    </div>
+
+    <div class="upload-btn-container">
+      <button type="submit" class="upload-btn">Tải lên</button>
+      <a href="/home/html/index.html" class="back-button">Trở về</a>
+    </div>
+  </form>
+</main>
+
+<script src="/upstory.js"></script>
+
+</body>
+</html>

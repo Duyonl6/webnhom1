@@ -1,0 +1,22 @@
+.card-icon {
+    font-size: 50px;
+    opacity: 0.3;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+.card {
+    position: relative;
+    padding: 20px;
+    border-radius: 10px;
+}
+.sidebar {
+    height: 100vh;
+}
+#addAdminModal .modal-header {
+    background-color: #007bff;
+    color: white;
+}
+#addAdminModal .btn-primary {
+    background-color: #007bff;
+}

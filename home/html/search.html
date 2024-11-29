@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instagram Search</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="/home/css/search.css">
+</head>
+<body>
+  <header class="header">
+    <div class="logo">Nhom 1</div>
+    <div class="search-container">
+      <input
+        type="text"
+        id="search-bar"
+        placeholder="Search"
+        onfocus="showSuggestions()"
+        onblur="hideSuggestions()"
+        oninput="filterSuggestions()"
+      >
+      <div class="suggestions" id="suggestions">
+        <p onclick="fillSearch('Travel')">Travel</p>
+        <p onclick="fillSearch('Food')">Food</p>
+        <p onclick="fillSearch('Photography')">Photography</p>
+        <p onclick="fillSearch('Coding')">Coding</p>
+      </div>
+    </div>
+    <button id="back-to-home">
+      <a href="/home/html/index.html"><i class="fa fa-home"></i> Home</a>
+    </button>
+  </header>
+
+  <main>
+    <h1>Explore & Discover</h1>
+    <p>Search for topics, hashtags, and people to connect with your interests.</p>
+    <img src="/home/images/explore.png" alt="Explore illustration" class="main-illustration">
+  </main>
+
+  <script src="/home/js/search.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chỉnh sửa thông tin cá nhân</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/user/css/edit.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Chỉnh sửa thông tin cá nhân</h1>
+        <form id="edit-profile-form">
+    
+            <div class="avatar-upload">
+                <div class="avatar-preview" id="avatar-preview" style="background-image: url('default-avatar.png');"></div>
+                <input type="file" id="avatar" accept="image/*" onchange="previewAvatar(event)">
+                <small>Chọn ảnh đại diện (JPG, PNG)</small>
+            </div>
+
+            <label for="name">Họ và tên:</label>
+            <input type="text" id="name" name="name" placeholder="Nhập họ và tên">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Nhập email">
+
+            <label for="dob">Ngày sinh:</label>
+            <input type="date" id="dob" name="dob">
+
+            <label for="gender">Giới tính:</label>
+            <select id="gender" name="gender">
+                <option value="male">Nam</option>
+                <option value="female">Nữ</option>
+                <option value="other">Khác</option>
+            </select>
+
+            <label for="bio">Giới thiệu bản thân:</label>
+            <textarea id="bio" name="bio" placeholder="Nhập giới thiệu ngắn gọn"></textarea>
+
+            <label for="social-links">Liên kết mạng xã hội:</label>
+            <input type="text" id="social-links" name="social-links" placeholder="Nhập liên kết Facebook, Instagram, v.v.">
+
+          
+            <label for="address">Địa chỉ:</label>
+            <input type="text" id="address" name="address" placeholder="Nhập địa chỉ của bạn">
+
+    
+            <label for="phone">Số điện thoại:</label>
+            <input type="text" id="phone" name="phone" placeholder="Nhập số điện thoại">
+
+            <button type="button"><a href="/user/html/profile.html">Lưu thông tin</a></button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

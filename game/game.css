@@ -1,0 +1,192 @@
+* {
+    margin: 0;
+}
+header {
+    width: 100%;
+    height: 100px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    box-shadow: rgba(0, 0, 0, 0.20) 0px 10px 20px, rgba(0, 0, 0, 0.25) 0px 6px 6px;  
+}
+img {
+    height: 100px;
+    width: 130px;
+}
+a {
+    color: black;
+    text-decoration: none;
+}
+.fa-solid {
+    padding-right: 25px;
+    font-size: 25px;
+}
+.nav {
+    position: relative;
+    background-color: #ffffff00;
+    padding: 20px;
+    transition: 0.5s;
+    border-radius: 50px;
+    overflow: hidden;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0);
+}
+
+.menu {
+    margin: 0;
+    padding: 0;
+    width: 0;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.connect {
+    padding-top: 130px;
+    text-align: center;
+}
+.button {
+    font-family:monospace;
+    height: 50px;
+    width: 48%;
+    position: relative;
+    background-color: transparent;
+    cursor: pointer;
+    border: 2px solid #252525;
+    overflow: hidden;
+    border-radius: 30px;
+    color: #333;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .btn-txt {
+    z-index: 1;
+    font-weight: 800;
+    letter-spacing: 4px;
+  }
+  
+  .type1::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all 0.5s ease-in-out;
+    background-color: #333;
+    border-radius: 30px;
+    visibility: hidden;
+    height: 10px;
+    width: 10px;
+    z-index: -1;
+  }
+  
+  .button:hover {
+    box-shadow: 1px 1px 200px #252525;
+    color: #fff;
+    border: none;
+  }
+  
+  .type1:hover::after {
+    visibility: visible;
+    transform: scale(100) translateX(2px);
+  }
+
+nav {
+    margin-left: 10px;
+    margin-right: 10px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    display: flex;
+    margin-top: 50px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
+}
+.game-one {
+    width: 25%;
+    font-family: "Geist", sans-serif;
+    border: 1px solid grey;
+    border-radius: 10px;
+    margin: 15px;
+    
+    box-sizing: border-box;
+}
+  .information {
+    padding-left: 10px;
+  }
+  .game-one h1 {
+    font-size: 25px;
+    text-align: center;
+  }
+  .game-one i {
+    font-size: 15px;
+  }
+  .fa-check {
+    padding-left: 20px;
+  }
+  .game-one p {
+    font-size: 13px;
+    font-family: "Geist", sans-serif;
+    font-weight: 300;
+    display: inline;
+  }
+.button-type2 {
+    display: inline-block;
+    background-color: #fff;
+    width: 100%;
+    height: 30px;
+    border-radius: 0px 0px 10px 10px;
+    border-left: none; 
+    border-right: none; 
+    border-bottom: none;
+    border-top: 1px solid grey;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease-in;
+    z-index: 1;
+   }
+   
+   .button-type2::before,
+   .button-type2::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 100%;
+    transform: skew(15deg);
+    transition: all 0.5s;
+    overflow: hidden;
+    z-index: -1;
+   }
+   
+   .button-type2::before {
+    left: -10px;
+    background: #240046;
+   }
+   
+   .button-type2::after {
+    right: -10px;
+    background: #5a189a;
+   }
+   
+   .button-type2:hover::before,
+   .button-type2:hover::after {
+    width: 56%;
+   }
+   
+   .button-type2:hover span {
+    color: #e0aaff;
+    transition: 0.3s;
+   }
+   
+   .button-type2 span {
+    color: #03045e;
+    font-size: 18px;
+    transition: all 0.3s ease-in;
+   }
+   @media (max-width: 768px) {
+    .fa-comments,.fa-house,.fa-gamepad {
+      font-size: 99%;
+    }
+}

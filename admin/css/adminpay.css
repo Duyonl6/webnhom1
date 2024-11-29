@@ -1,0 +1,16 @@
+.card {
+    position: relative;
+    padding: 20px;
+    border-radius: 10px;
+}
+.card-icon {
+    font-size: 50px;
+    opacity: 0.3;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+.badge {
+    font-size: 0.85em;
+    padding: 5px 10px;
+}
